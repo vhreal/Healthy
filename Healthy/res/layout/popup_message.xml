@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#12000000">
+    
+    <Button 
+        android:id="@+id/message_accept"
+        android:layout_width="280dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dip"
+        android:text="@string/message_accept"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:background="@drawable/selector_message_accept"/>
+    
+    <Button
+        android:id="@+id/message_refuse"
+        android:layout_width="280dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+         android:padding="10dip"
+        android:text="@string/message_refuse"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:background="@drawable/selector_message_accept"/>
+    
+    <Button
+        android:id="@+id/message_dismiss"
+        android:layout_width="280dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dip"
+        android:text="@string/message_dismiss"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:background="@drawable/selector_message_dismiss"/>"
+</LinearLayout>

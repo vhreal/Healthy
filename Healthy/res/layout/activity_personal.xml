@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/off_white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/bg_titlebar_blue"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <!-- 标题 -->
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/title_personal_info"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- 退出按钮 -->
+
+        <ImageView
+            android:id="@+id/back_personal_btn"
+            android:layout_width="54dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_titlebar_wrapper"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_titlebar_back" />
+
+        <!-- 分割线 -->
+
+        <ImageView
+            android:layout_width="2px"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@id/back_personal_btn"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_titlebar_separator" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/personal_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:layout_weight="1.0" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/off_white"
+            android:orientation="vertical"
+            android:padding="10dip">
+            
+            <LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="40dip"
+	            android:orientation="horizontal"
+	            android:layout_marginTop="20dip">
+
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/personal_sex"
+	                android:background="@drawable/shape_personal_sex"
+	                style="@style/PersonalSettingsItem"/>
+	
+	            <RadioGroup
+	                android:id="@+id/personal_sex_choose"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:orientation="horizontal" 
+	                style="@style/PersonalSettingsContent"
+	                android:background="@drawable/shape_personal_sexcontent">
+	
+	                <RadioButton
+	                    android:id="@+id/personal_radioMale"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="fill_parent"
+	                    android:checked="true"
+	                    android:text="男"
+	                    android:textColor="@color/black" >
+	                </RadioButton>
+	
+	                <RadioButton
+	                    android:id="@+id/personal_radioFemale"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="fill_parent"
+	                    android:text="女"
+	                    android:textColor="@color/black" >
+	                </RadioButton>
+	            </RadioGroup>
+	        </LinearLayout>
+	        
+	        <View 
+	            android:layout_width="fill_parent"
+	            android:layout_height="1dip"
+	            android:background="#BFEFFF"/>
+            
+            <LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="40dip"
+	            android:orientation="horizontal">
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/personal_age"
+	                style="@style/PersonalSettingsItem"/>
+	
+	            <EditText
+	                android:id="@+id/personal_age_text"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:hint="0"
+	                android:numeric="integer"
+	                android:maxLength="3"
+	                style="@style/PersonalSettingsContent"/>
+	        </LinearLayout>
+	        
+            <View 
+	            android:layout_width="fill_parent"
+	            android:layout_height="1dip"
+	            android:background="#BFEFFF"/>
+
+            <LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="40dip"
+	            android:orientation="horizontal">
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/personal_height"
+	                style="@style/PersonalSettingsItem"/>
+	
+	            <EditText
+	                android:id="@+id/personal_height_text"
+	                android:layout_width="fill_parent"
+	                android:layout_height="fill_parent"
+	                android:hint="0"
+	                android:inputType="numberDecimal"
+	                android:maxLength="5"
+	                style="@style/PersonalSettingsContent"/>
+	        </LinearLayout>
+	        
+            <View 
+	            android:layout_width="fill_parent"
+	            android:layout_height="1dip"
+	            android:background="#BFEFFF"/>
+
+            <LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="40dip"
+	            android:orientation="horizontal">
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/personal_weight"
+	                style="@style/PersonalSettingsItem"/>
+	
+	            <EditText
+	                android:id="@+id/personal_weight_text"
+	                android:layout_width="fill_parent"
+	                android:layout_height="fill_parent"
+	                android:hint="0.0"
+	                android:numeric="decimal"
+	                android:maxLength="5"
+	                style="@style/PersonalSettingsContent"/>
+	        </LinearLayout>
+	        
+            <View 
+	            android:layout_width="fill_parent"
+	            android:layout_height="1dip"
+	            android:background="#BFEFFF"/>
+
+            <LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="40dip"
+	            android:orientation="horizontal">
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/personal_stride"
+	                style="@style/PersonalSettingsItem"
+	                android:background="@drawable/shape_personal_stride"/>
+	
+	            <EditText
+	                android:id="@+id/personal_stride_text"
+	                android:layout_width="fill_parent"
+	                android:layout_height="fill_parent"
+	                android:hint="0.0"
+	                android:inputType="numberDecimal"
+	                android:maxLength="5"
+	                style="@style/PersonalSettingsContent"
+	                android:background="@drawable/shape_personal_stridecontent"/>
+	        </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/personal_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="4dip"
+        android:background="@drawable/selector_login_btn"
+        android:paddingBottom="8.0dp"
+        android:paddingTop="8.0dp"
+        android:text="@string/personal_save"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+</LinearLayout>

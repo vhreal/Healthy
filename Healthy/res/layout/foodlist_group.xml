@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dip"
+    android:background="@color/off_white"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/time_line"
+        android:layout_width="wrap_content"
+        android:layout_height="50dip"
+        android:layout_gravity="center_vertical">
+
+        <!-- time line -->
+
+        <View
+            android:id="@+id/upper_line"
+            android:layout_width="4sp"
+            android:layout_height="25.0dip"
+            android:layout_marginLeft="63.5dip"
+            android:background="@color/lighter_gray" />
+  
+        <View
+            android:id="@+id/lower_line"
+            android:layout_below="@id/upper_line"
+            android:layout_width="4sp"
+            android:layout_height="25.0dip"
+            android:layout_marginLeft="63.5dip"
+            android:background="@color/lighter_gray" />
+        
+        <ImageView
+            android:id="@+id/moment_bigdot"
+            style="@style/moment_big_dot"
+            android:layout_width="35.0dip"
+            android:layout_height="35.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="48dip"
+            android:background="@drawable/bg_moment_dot"
+            android:src="@drawable/moment_dot_blue"
+            android:contentDescription="@null" />
+        
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/foods_group_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+		android:layout_toRightOf="@id/time_line"
+		android:layout_marginLeft="5.0dip"
+        android:text="早餐"
+        style="@style/WhiteDownShadow"
+        android:textColor="@color/light_gray"
+        android:textSize="20.0sp" />
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/off_white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:background="@drawable/bg_titlebar_blue"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <!-- 标题 -->
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="@string/title_history_activity"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- 退出按钮 -->
+
+            <ImageView
+                android:id="@+id/back_tracker_btn"
+                android:layout_width="54dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_titlebar_wrapper"
+                android:clickable="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_titlebar_back" />
+
+            <!-- 分割线 -->
+
+            <ImageView
+                android:layout_width="2px"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/back_tracker_btn"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_titlebar_separator" />
+        </RelativeLayout>
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapsView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true" />
+    </LinearLayout>
+
+</LinearLayout>

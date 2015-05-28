@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/off_white"
+        android:clickable="true"
+        android:orientation="vertical" >
+
+        <!-- 自定义的标题栏 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:background="@drawable/bg_titlebar_blue"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dip"
+                android:background="@drawable/bg_titlebar_blue"
+                android:clickable="true"
+                android:orientation="horizontal" >
+
+                <!-- 标题 -->
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="@string/register_title"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- 退出按钮 -->
+
+                <ImageView
+                    android:id="@+id/account_back"
+                    android:layout_width="54dip"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/selector_titlebar_wrapper"
+                    android:clickable="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_titlebar_back" />
+
+                <!-- 分割线 -->
+
+                <ImageView
+                    android:layout_width="2px"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@id/account_back"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bg_titlebar_separator" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- 注册 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingLeft="30.0dip"
+            android:paddingRight="30.0dip"
+            android:paddingTop="20.0dip" >
+
+            <EditText
+                android:id="@+id/raccount"
+                android:layout_width="fill_parent"
+                android:layout_height="38.0dip"
+                android:background="@drawable/bg_edittext"
+                android:gravity="center_vertical"
+                android:hint="@string/rname"
+                android:paddingLeft="10.0dip" />
+
+            <EditText
+                android:id="@+id/rpassword"
+                android:layout_width="fill_parent"
+                android:layout_height="38.0dip"
+                android:layout_marginTop="5.0dip"
+                android:background="@drawable/bg_edittext"
+                android:gravity="center_vertical"
+                android:hint="@string/rpassword"
+                android:inputType="textPassword"
+                android:paddingLeft="10.0dip" />
+
+            <EditText
+                android:id="@+id/ragain_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="38.0dip"
+                android:layout_marginTop="5.0dip"
+                android:background="@drawable/bg_edittext"
+                android:gravity="center_vertical"
+                android:hint="@string/ragainpwd"
+                android:inputType="textPassword"
+                android:paddingLeft="10.0dip" />
+
+            <Button
+                android:id="@+id/register"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/selector_login_btn"
+                android:text="@string/register"
+                android:textColor="#ffffffff"
+                android:textSize="18.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

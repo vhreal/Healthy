@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/off_white"
+        android:clickable="true" >
+
+        <RelativeLayout
+            android:id="@+id/message_title"
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:background="@drawable/bg_titlebar_blue"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/flip_menu"
+                android:layout_width="54dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_titlebar_wrapper"
+                android:clickable="true"
+                android:contentDescription="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_titlebar_flip" />
+
+            <ImageView
+                android:layout_width="2px"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/flip_menu"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_titlebar_separator" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="@string/title_message"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/message_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/message_title"
+            android:layout_marginTop="10dip"
+            android:cacheColorHint="@null"
+            android:divider="@null"
+            />
+
+        <LinearLayout
+            android:id="@+id/message_empty_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+			android:paddingTop="120dip"
+            android:layout_below="@id/message_title"
+            android:orientation="vertical"
+            android:visibility="gone" >
+			
+            <ImageView 
+                android:layout_width="96dip"
+                android:layout_height="96dip"
+                android:layout_gravity="center"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_message_empty"
+                android:contentDescription="@null"/>
+                
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/message_empty"
+                android:textColor="@color/light_gray"
+                android:textSize="20sp" />
+            
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

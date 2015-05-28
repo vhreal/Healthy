@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="menupanel_group_names">
+        <item>浏览</item>
+        <item>操作</item>
+        <item>关于</item>
+    </string-array>
+    <string-array name="menupanel_browse_child_names">
+        <item>概览</item>
+        <item>摄入食物</item>
+        <item>运动轨迹</item>
+        <item>朋友</item>
+        <item>消息中心</item>
+    </string-array>
+    <string-array name="menupanel_options_child_names">
+        <item>设置</item>
+        <item>退出</item>
+    </string-array>
+    <string-array name="menupanel_about_child_names">
+        <item>帮助</item>
+        <item>反馈</item>
+        <item>关于健康达人</item>
+    </string-array>
+
+    <!-- 最多可以识别8种 -->
+    <integer-array name="pie_chart_colors">
+        <item>0xff6e7fb5</item>
+        <!-- 蓝 -->
+        <item>0xffc5212c</item>
+        <!-- 枣红 -->
+        <item>0xff34a9b1</item>
+        <!-- 藏青 -->
+        <item>0xff564290</item>
+        <!-- 紫 -->
+        <item>0xffeea556</item>
+        <!-- 橙 -->
+        <item>0xff61c25a</item>
+        <!-- 绿 -->
+        <item>0xff8cadd7</item>
+        <!-- 天蓝 -->
+        <item>0xff969696</item>
+        <!-- 灰色 -->
+    </integer-array>
+
+    <string-array name="foods_group_names">
+        <item>早餐</item>
+        <item>午餐</item>
+        <item>晚餐</item>
+        <item>夜宵</item>
+    </string-array>
+    
+    <!-- 与foods_group_names相对应的就餐最晚时间 -->
+    <string-array name="foods_group_criteria">
+        <item>10:00</item>
+        <item>16:00</item>
+        <item>21:00</item>
+        <item>24:00</item>
+    </string-array>
+
+</resources>

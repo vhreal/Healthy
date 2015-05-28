@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FCFCFC"
+    android:paddingBottom="20dip" >
+
+    <RelativeLayout
+        android:id="@+id/foodadd_layout_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="15dip"
+        android:background="@drawable/bg_foodadd_top"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/widget73"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="15dip"
+            android:text="食物名称"
+            android:textColor="#696969"
+            android:textSize="15dip" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/customfood_nameedit"
+            android:layout_width="230dip"
+            android:layout_height="40.0dip"
+            android:layout_alignLeft="@id/widget73"
+            android:layout_below="@id/widget73"
+            android:layout_marginBottom="15.0dip"
+            android:hint="请输入食物名称"
+            android:maxLength="8"
+            android:text=""
+            android:textColorHint="#D4D4D4"
+            android:textSize="18sp" >
+        </EditText>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/foodadd_layout_2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/foodadd_layout_1"
+        android:layout_alignRight="@id/foodadd_layout_1"
+        android:layout_below="@id/foodadd_layout_1"
+        android:background="@drawable/bg_foodadd_middle"
+        android:paddingTop="5dip" >
+
+        <TextView
+            android:id="@+id/customfood_unit_calorie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="5dip"
+            android:text="单位卡路里"
+            android:textColor="#696969"
+            android:textSize="15dip" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/customfood_unitedit"
+            android:layout_width="100dip"
+            android:layout_height="38dip"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@id/customfood_unit_calorie"
+            android:hint="0"
+            android:maxLength="5"
+            android:numeric="integer"
+            android:text=""
+            android:textSize="18sp" >
+        </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/customfood_unit_calorie"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@id/customfood_unitedit"
+            android:text="@string/default_food_calorie"
+            android:textColor="#696969"
+            android:textSize="15dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/foodadd_layout_3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/foodadd_layout_2"
+        android:layout_alignRight="@id/foodadd_layout_2"
+        android:layout_below="@id/foodadd_layout_2"
+        android:background="@drawable/bg_foodadd_middle"
+        android:paddingTop="10dip" >
+
+        <EditText
+            android:id="@+id/customfood_food_numedit"
+            android:layout_width="100dip"
+            android:layout_height="38dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="5dip"
+            android:hint="0"
+            android:maxLength="6"
+            android:numeric="integer"
+            android:text=""
+            android:textSize="18sp" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/widget133"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@id/customfood_food_numedit"
+            android:text="g"
+            android:textColor="#696969"
+            android:textSize="15dip" >
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/foodadd_layout_4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/foodadd_layout_3"
+        android:layout_alignRight="@id/foodadd_layout_3"
+        android:layout_below="@id/foodadd_layout_3"
+        android:background="@drawable/bg_foodadd_bottom"
+        android:paddingBottom="15dip"
+        android:paddingTop="10dip" >
+
+        <TextView
+            android:id="@+id/customfood_total_caloritext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="5dip"
+            android:text="卡路里总量"
+            android:textColor="#696969"
+            android:textSize="15dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/customfood_food_totalcalurie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/customfood_total_caloritext"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@id/customfood_total_caloritext"
+            android:text="@string/default_total_calorie"
+            android:textColor="#696969"
+            android:textSize="15dip" >
+        </TextView>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/customfood_addnow_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:text="添加" >
+    </Button>
+
+</RelativeLayout>

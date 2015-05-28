@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/achieve_msg_text"
+    android:paddingLeft="20dip"
+    android:paddingTop="20dip"
+    android:paddingBottom="20dip"
+    android:paddingRight="4dip"
+    android:orientation="horizontal">
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/message_accept_one"
+        android:textColor="@color/light_blue"
+        android:textSize="18sp"/>
+    
+    <TextView 
+        android:id="@+id/message_from_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dip"
+        android:layout_marginRight="4dip"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/deepSky_blue"
+        android:textSize="18sp"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/message_accept_two"
+        android:textColor="@color/light_blue"
+        android:textSize="18sp"/>
+    
+</LinearLayout>

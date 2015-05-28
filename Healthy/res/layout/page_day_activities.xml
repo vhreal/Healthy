@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 当天运动指数 -->
+
+    <ScrollView
+        android:id="@+id/today_activity_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dip"
+        android:layout_marginRight="6dip"
+        android:layout_marginTop="6dip"
+        android:layout_weight="1.0"
+        android:padding="6dip"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_trackerlist_item"
+            android:orientation="vertical"
+            android:padding="6.0dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="8.0dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/today_movement_string"
+                    android:textColor="@color/deepSky_blue"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/star_one_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:contentDescription="@null"
+                    android:src="@drawable/star_unmark" />
+
+                <ImageView
+                    android:id="@+id/star_two_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/star_unmark" />
+
+                <ImageView
+                    android:id="@+id/star_three_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/star_unmark" />
+
+                <ImageView
+                    android:id="@+id/star_four_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/star_unmark" />
+
+                <ImageView
+                    android:id="@+id/star_five_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/star_unmark" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="4px"
+                android:layout_marginBottom="6.0dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="8.0dip"
+                android:background="@color/deepSky_blue" />
+
+          <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/running_string"
+                    android:textColor="@color/light_blue"
+                    android:textSize="16sp" />
+
+                <com.healthy.ui.base.TextProgressBar
+                    android:id="@+id/dashboard_running_text"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="16dip"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="25dip"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progressbar" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="6.0dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="6.0dip"
+                android:background="@color/lighter_gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/walking_string"
+                    android:textColor="@color/light_blue"
+                    android:textSize="16sp" />
+
+                <com.healthy.ui.base.TextProgressBar
+                    android:id="@+id/dashboard_walking_text"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="16dip"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="25dip"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progressbar" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="6.0dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="6.0dip"
+                android:background="@color/lighter_gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/static_string"
+                    android:textColor="@color/light_blue"
+                    android:textSize="16sp" />
+
+                <com.healthy.ui.base.TextProgressBar
+                    android:id="@+id/dashboard_static_text"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="16dip"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="25dip"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progressbar"
+                    android:secondaryProgress="0" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="6.0dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="6.0dip"
+                android:background="@color/lighter_gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/browsing_string"
+                    android:textColor="@color/light_blue"
+                    android:textSize="16sp" />
+
+                <com.healthy.ui.base.TextProgressBar
+                    android:id="@+id/dashboard_browsing_text"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="16dip"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dip"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progressbar"
+                    android:secondaryProgress="0" />
+            </LinearLayout>
+
+            
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/dash_chart_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="12dip"
+        android:layout_marginRight="12dip"
+        android:layout_marginTop="4dip"
+        android:background="@drawable/selector_login_btn"
+        android:paddingBottom="8.0dp"
+        android:paddingTop="8.0dp"
+        android:text="@string/btn_chart_data"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+</LinearLayout>

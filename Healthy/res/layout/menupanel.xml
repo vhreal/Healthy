@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <ExpandableListView
+        android:id="@+id/menupanel_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:childIndicator="@null"
+        android:divider="#ff000000"
+        android:dividerHeight="0.5dip"
+        android:groupIndicator="@null"
+        android:listSelector="#00000000"
+        android:scrollbars="none">
+    </ExpandableListView>
+      
+     <ImageView
+        android:layout_below="@id/menupanel_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg_menupanel_repeat"/>  
+
+</RelativeLayout>

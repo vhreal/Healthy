@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="10dip"
+    android:padding="10dip"
+    android:background="@drawable/bg_trackerlist_item"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/friends_calories_ranking"
+        android:textSize="18sp"
+        android:textColor="#20b2aa"
+        android:textStyle="bold"/>
+    
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="3px"
+        android:layout_marginTop="8dip"
+        android:layout_marginBottom="8dip"
+        android:background="@color/light_green"/>
+    
+    <ListView 
+        android:id="@+id/friends_ranking_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@null"
+        android:divider="@null"
+        android:clickable="false"
+        android:listSelector="@android:color/transparent"
+        />
+    
+</LinearLayout>

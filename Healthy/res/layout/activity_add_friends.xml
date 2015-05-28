@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/off_white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/bg_titlebar_blue"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <!-- 标题 -->
+
+        <TextView
+            android:id="@+id/title_add_friends"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/title_addfriends"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- 退出按钮 -->
+
+        <ImageView
+            android:id="@+id/back_friends_btn"
+            android:layout_width="54dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_titlebar_wrapper"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_titlebar_back" />
+
+        <!-- 分割线 -->
+
+        <ImageView
+            android:layout_width="2px"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@id/back_friends_btn"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_titlebar_separator" />
+
+        <ImageView
+            android:id="@+id/title_search_btn"
+            android:layout_width="36dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_titlebar_wrapper"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_title_search" />
+
+        <View
+            android:id="@+id/add_friends_line"
+            android:layout_width="2px"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@id/title_search_btn"
+            android:layout_marginTop="4dip"
+            android:layout_marginBottom="4dip"
+            android:layout_marginLeft="4dip"
+            android:background="#22ffffff" />
+
+        <ImageView
+            android:id="@+id/title_location_btn"
+            android:layout_width="36dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_toLeftOf="@id/add_friends_line"
+            android:background="@drawable/selector_titlebar_wrapper"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_title_location" />
+    </RelativeLayout>
+
+     <ViewFlipper
+            android:id="@+id/friends_add_flipper"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            />
+
+</LinearLayout>

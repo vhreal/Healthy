@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/off_white"
+        android:orientation="vertical" 
+        android:clickable="true">
+
+        <!-- 自定义的标题栏 -->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:background="@drawable/bg_titlebar_blue"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <!-- 退出按钮 -->
+
+            <ImageView
+                android:id="@+id/back_introduce_btn"
+                android:layout_width="54dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_titlebar_wrapper"
+                android:clickable="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_titlebar_back"
+                android:contentDescription="@null" />
+
+            <!-- 分割线 -->
+
+            <ImageView
+                android:layout_toRightOf="@id/back_introduce_btn"
+                android:layout_width="2px"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_titlebar_separator" />
+
+            <!-- 标题 -->
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" 
+                android:text="@string/title_achieve_introduce"/>
+
+        </RelativeLayout>
+        
+        <ListView 
+            android:id="@+id/achieve_introduce_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:cacheColorHint="@android:color/transparent"
+            android:listSelector="@android:color/transparent"/>
+        
+    </LinearLayout>
+</LinearLayout>

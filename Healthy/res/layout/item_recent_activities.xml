@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:clickable="false">
+
+    <TextView
+        android:id="@+id/category"
+        style="@style/WhiteDownShadow"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="20.0dip"
+        android:gravity="center_vertical"
+        android:textSize="20.0sp"
+        android:textColor="@color/light_blue"/>
+
+    <TextView
+        android:id="@+id/measurement"
+        style="@style/WhiteDownShadow"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20.0dip"
+        android:gravity="center_vertical"
+        android:textSize="20.0sp" 
+        android:textColor="@color/light_blue"/>
+</RelativeLayout>

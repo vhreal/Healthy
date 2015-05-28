@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dip"
+    android:paddingBottom="10dip"
+    >
+    
+    <TextView 
+        android:id="@+id/friends_ranking_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="@color/light_blue"
+        android:textSize="18sp"/>
+    
+    <ImageView 
+        android:id="@+id/friends_ranking_image"
+        android:layout_width="42dip"
+        android:layout_height="42dip"
+        android:layout_toRightOf="@id/friends_ranking_number"
+        android:layout_marginLeft="10dip"
+        android:contentDescription="@null"/>
+    
+    <TextView 
+        android:id="@+id/friends_ranking_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:layout_toRightOf="@id/friends_ranking_image"
+        android:textColor="@color/light_blue"
+        android:textSize="18sp"/>
+    
+    <TextView
+        android:id="@+id/friends_ranking_kcal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/light_blue"
+        android:textSize="18sp"/>
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+     >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical">
+
+        <View
+            android:layout_width="4px"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dip"
+            android:background="@color/lighter_gray" />
+
+        <ImageView
+            style="@style/moment_small_dot"
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:background="@drawable/bg_moment_dot"
+            android:src="@drawable/moment_dot_colored"
+            android:contentDescription="@null"
+            android:layout_centerVertical="true" />
+     
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_marginTop="1dip"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/achieve_msg_text"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/achieve_medal"
+            android:contentDescription="@null" />
+        
+        <TextView 
+            android:id="@+id/achievement_preintroduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dip"
+            android:layout_gravity="center"
+            android:text="@string/achievement_preintroduce"
+            android:textColor="@color/light_blue"
+            android:textSize="16sp"/>
+        
+        <TextView 
+            android:id="@+id/achievement_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/deepSky_blue"/>
+    </LinearLayout>
+
+</LinearLayout>

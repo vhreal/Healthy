@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_group_panel"
+        android:orientation="vertical"
+        android:paddingBottom="6dip"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+        android:paddingTop="6dip" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0" >
+
+            <EditText
+                android:id="@+id/friends_search_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_search_box"
+                android:focusable="true"
+                android:hint="@string/tip_addfriends"
+                android:paddingLeft="15.0dip"
+                android:paddingRight="40.0dip"
+                android:singleLine="true"
+                android:textSize="16.0sp" />
+
+            <Button
+                android:id="@+id/friends_search_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/selector_search_btn" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/friends_search_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:cacheColorHint="@null"
+        android:divider="@color/lighter_gray"
+        android:dividerHeight="1dp"
+        android:listSelector="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/friends_search_no"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/bg_friend_no_content"
+        android:visibility="visible" />
+
+    <com.healthy.ui.base.LoadingView
+        android:id="@+id/friends_search_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="65dip"
+    android:orientation="horizontal" >
+
+    <!-- time line -->
+
+    <RelativeLayout
+        android:id="@+id/time_line"
+        android:layout_width="wrap_content"
+        android:layout_height="65dip"
+        android:layout_gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/food_time"
+            style="@style/WhiteDownShadow"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="8.0dip"
+            android:layout_marginRight="6.0dip"
+            android:gravity="center_vertical"
+            android:textColor="@color/light_gray"
+            android:textSize="18.0sp" />
+
+        <View
+            android:id="@+id/upper_line"
+            android:layout_width="4sp"
+            android:layout_height="32.5dip"
+            android:layout_marginLeft="63.5dip"
+            android:background="@color/lighter_gray" />
+  
+        <View
+            android:id="@+id/lower_line"
+            android:layout_below="@id/upper_line"
+            android:layout_width="4sp"
+            android:layout_height="32.5dip"
+            android:layout_marginLeft="63.5dip"
+            android:background="@color/lighter_gray" />
+
+        <ImageView
+            android:id="@+id/moment_smalldot"
+            style="@style/moment_small_dot"
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="53.5dip"
+            android:background="@drawable/bg_moment_dot"
+            android:contentDescription="@null"
+            android:src="@drawable/moment_dot_green" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="65dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="30dip"
+        android:layout_toRightOf="@id/time_line"
+        android:background="@drawable/achieve_msg_text"
+        android:paddingLeft="17dip" 
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/food_name"
+            style="@style/WhiteDownShadow"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1.0"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="70dip"
+            android:text="乌拉乌拉大肉包子"
+            android:textColor="@color/light_blue"
+            android:textSize="16sp" 
+            />
+
+        <RelativeLayout
+            android:layout_marginTop="3.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/mass_tip"
+                style="@style/WhiteDownShadow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:maxWidth="80dip"
+                android:text="质量:"
+                android:textColor="@color/light_gray"
+                android:textSize="14sp" />
+            
+            <TextView
+                android:id="@+id/food_num"
+                style="@style/WhiteDownShadow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:maxWidth="70dip"
+                android:text="100g"
+                android:textColor="@color/light_blue"
+                android:textSize="14sp"
+                android:layout_toRightOf="@id/mass_tip" />
+            
+            <TextView
+                android:id="@+id/food_calorie"
+                style="@style/WhiteDownShadow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:maxWidth="70dip"
+                android:text="100kcal"
+                android:textColor="@color/deepSky_blue"
+                android:textSize="14sp" 
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dip"/>
+            
+            <TextView
+                android:id="@+id/food_num"
+                style="@style/WhiteDownShadow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:maxWidth="75dip"
+                android:text="热量:"
+                android:textColor="@color/light_gray"
+                android:textSize="14sp" 
+                android:layout_toLeftOf="@id/food_calorie"/>
+
+            
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/delete_btn"
+        android:layout_width="30dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:drawableTop="@drawable/ic_delete"
+        android:gravity="center"
+        android:text="@string/tip_delete"
+        android:textColor="#00a75f"
+        android:textSize="10.0sp" />
+
+</RelativeLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/off_white"
+        android:orientation="vertical" 
+        android:clickable="true">
+
+        <!-- 自定义的标题栏 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:background="@drawable/bg_titlebar_blue"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <!-- 菜单按钮 -->
+
+            <ImageView
+                android:id="@+id/tracker_flip_menu"
+                android:layout_width="54dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_titlebar_wrapper"
+                android:clickable="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_titlebar_flip" />
+
+            <!-- 分割线 -->
+
+            <ImageView
+                android:layout_width="2px"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_titlebar_separator" />
+
+            <!-- 标题 -->
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="@string/title_tour_tracker"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            
+             <!-- 分割线 -->
+
+            <ImageView
+                android:layout_width="2px"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_titlebar_separator" />
+			
+            <FrameLayout 
+                android:id="@+id/refresh_layout"
+                android:layout_width="54dip"
+                android:layout_height="fill_parent">
+                
+                 <ImageView
+                	android:id="@+id/refresh_btn"
+                	android:layout_width="54dip"
+                	android:layout_height="fill_parent"
+                	android:layout_gravity="center"
+                	android:background="@drawable/selector_titlebar_wrapper"
+                	android:clickable="true"
+           			android:scaleType="centerInside"
+                	android:src="@drawable/ic_refresh" />
+                 
+                 <ProgressBar 
+                     android:id="@+id/refresh_progress"
+                     android:layout_width="54dip"
+                     android:layout_height="54dip"
+                     android:layout_gravity="center"
+                	 android:background="@drawable/selector_titlebar_wrapper"
+                	 android:scaleType="centerInside"
+                	 style="?android:attr/progressBarStyleSmallTitle"
+                	 android:visibility="gone"/>
+                 
+            </FrameLayout>
+           
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/history_track"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1.0"
+            android:cacheColorHint="#00000000"
+            android:divider="@null" />
+
+        <ImageView
+            android:id="@+id/nodata_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dip"
+            android:layout_marginRight="40dip"
+            android:layout_weight="1.0"
+            android:src="@drawable/ic_tracker_nodata"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/start_track"
+            android:layout_width="fill_parent"
+            android:layout_height="42dip"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/selector_login_btn"
+            android:clickable="true"
+            android:text="@string/start_tracker"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

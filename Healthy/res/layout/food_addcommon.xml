@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FCFCFC"
+    android:paddingBottom="20dp" >
+
+    <RelativeLayout
+        android:id="@+id/foodadd_layout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_foodadd_top"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/widget72"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="15dp"
+            android:text="食物名称"
+            android:textColor="#696969"
+            android:textSize="15dp" >
+        </TextView>
+
+        <Spinner
+            android:id="@+id/food_spinner"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/widget72"
+            android:layout_below="@+id/widget72"
+            android:layout_marginBottom="15dp" 
+            android:prompt="@string/spinner_choose_food">
+        </Spinner>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/foodadd_layout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/foodadd_layout1"
+        android:layout_alignRight="@+id/foodadd_layout1"
+        android:layout_below="@+id/foodadd_layout1"
+        android:background="@drawable/bg_foodadd_middle"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/unit_calorie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:text="单位卡路里"
+            android:textColor="#696969"
+            android:textSize="15dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/food_calorie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/unit_calorie"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/unit_calorie"
+            android:text="@string/default_food_calorie"
+            android:textColor="#696969"
+            android:textSize="15dp" >
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/foodadd_layout3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/foodadd_layout2"
+        android:layout_alignRight="@+id/foodadd_layout2"
+        android:layout_below="@+id/foodadd_layout2"
+        android:background="@drawable/bg_foodadd_middle"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/widget132"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/food_numedit"
+            android:text="g"
+            android:textColor="#696969"
+            android:textSize="15dp" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/food_numedit"
+            android:layout_width="100dp"
+            android:layout_height="38dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:maxLength="6"
+            android:numeric="integer"
+            android:text=""
+            android:hint="0"
+            android:textSize="18sp" >
+        </EditText>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/foodadd_layout4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/foodadd_layout3"
+        android:layout_alignRight="@+id/foodadd_layout3"
+        android:layout_below="@+id/foodadd_layout3"
+        android:background="@drawable/bg_foodadd_bottom"
+        android:paddingBottom="15dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/total_calorietext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:text="卡路里总量"
+            android:textColor="#696969"
+            android:textSize="15dp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/food_totalcalorie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/total_calorietext"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/total_calorietext"
+            android:text="@string/default_total_calorie"
+            android:textColor="#696969"
+            android:textSize="15dp" >
+        </TextView>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/addnow_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="添加" >
+    </Button>
+
+</RelativeLayout>

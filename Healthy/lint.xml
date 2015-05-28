@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="HandlerLeak" severity="ignore">
+        <ignore path="src\com\healthy\ui\dashboard\RecentActivities.java" />
+        <ignore path="src\com\healthy\ui\friends\Friends.java" />
+        <ignore path="src\com\healthy\ui\friends\RegisterActivity.java" />
+        <ignore path="src\com\healthy\ui\menupanel\MenuPanel.java" />
+    </issue>
+    <issue id="SimpleDateFormat" severity="ignore" />
+</lint>

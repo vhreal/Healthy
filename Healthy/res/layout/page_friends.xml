@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/off_white"
+        android:clickable="true"
+        android:orientation="vertical" >
+
+        <!-- 自定义的标题栏 -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:background="@drawable/bg_titlebar_blue"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <!-- 菜单按钮 -->
+
+            <ImageView
+                android:id="@+id/flip_menu"
+                android:layout_width="54dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_titlebar_wrapper"
+                android:clickable="true"
+                android:contentDescription="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_titlebar_flip" />
+
+            <!-- 分割线 -->
+
+            <ImageView
+                android:layout_width="2px"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/flip_menu"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_titlebar_separator" />
+
+            <!-- 标题 -->
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="@string/title_friends"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/friends_add"
+                android:layout_width="54dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/selector_titlebar_wrapper"
+                android:clickable="true"
+                android:contentDescription="@null"
+                android:gravity="center"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_friends_search"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ViewFlipper
+            android:id="@+id/friends_content"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.0" >
+
+            <!-- 未登录的提示界面 -->
+
+            <LinearLayout
+                android:id="@+id/nologin_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/bg_friends_login"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="30dip"
+                    android:paddingRight="30dip"
+                    android:paddingTop="90dip" >
+
+                    <EditText
+                        android:id="@+id/friends_username_edit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:drawableLeft="@drawable/login_username_icon"
+                        android:drawablePadding="12dip"
+                        android:ems="10"
+                        android:hint="@string/name"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="10dip"
+                        android:background="@color/lighter_gray" />
+
+                    <EditText
+                        android:id="@+id/friends_password_edit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip"
+                        android:background="#00000000"
+                        android:drawableLeft="@drawable/login_psw_icon"
+                        android:drawablePadding="12dip"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1px"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@color/lighter_gray" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <CheckBox
+                            android:id="@+id/friends_remember_pwd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/checkbox"
+                            android:checked="true"
+                            android:paddingLeft="30dip"
+                            android:text="@string/remember_pwd"
+                            android:textColor="@color/deepSky_blue"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/friends_register"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/register"
+                            android:textColor="@color/selector_register_text"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/login"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="20dip"
+                        android:background="@drawable/selector_message_accept"
+                        android:clickable="true"
+                        android:paddingBottom="12dip"
+                        android:paddingTop="12dip"
+                        android:text="@string/login"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 登陆后的好友信息界面 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/friends_logined_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="220dip" >
+
+                    <RelativeLayout
+                        android:id="@+id/friends_my_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/friends_bg"
+                        android:paddingLeft="30dip" >
+
+                        <ImageView
+                            android:id="@+id/friends_myphoto_view"
+                            android:layout_width="96dip"
+                            android:layout_height="96dip"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="30dip"
+                            android:background="@drawable/shape_photo"
+                            android:contentDescription="@null"
+                            android:scaleType="center"
+                            android:src="@drawable/friend_ava_empty" />
+
+                        <TextView
+                            android:id="@+id/friends_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/friends_myphoto_view"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="3dip"
+                            android:textColor="#ffffffff"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RadioGroup
+                        android:id="@+id/friends_radiogroup"
+                        android:layout_width="fill_parent"
+                        android:layout_height="48dip"
+                        android:layout_alignParentBottom="true"
+                        android:background="#20000000"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/friends_list_radiobtn"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/selector_background"
+                            android:button="@null"
+                            android:checked="true"
+                            android:drawableLeft="@drawable/ic_item_friends"
+                            android:drawablePadding="6dip"
+                            android:paddingLeft="40dip"
+                            android:singleLine="true"
+                            android:text="@string/friends_string"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="fill_parent"
+                            android:layout_marginBottom="4dip"
+                            android:layout_marginTop="4dip"
+                            android:background="#666666" />
+
+                        <RadioButton
+                            android:id="@+id/friends_ranking_radiobtn"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/selector_background"
+                            android:button="@null"
+                            android:checked="true"
+                            android:drawableLeft="@drawable/ic_item_ranking"
+                            android:drawablePadding="6dip"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="40dip"
+                            android:singleLine="true"
+                            android:text="@string/friends_ranking"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <ViewFlipper
+                    android:id="@+id/friends_content_flipper"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+            
+            <com.healthy.ui.base.LoadingView
+                android:id="@+id/friends_loading"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"/>
+            
+        </ViewFlipper>
+    </LinearLayout>
+
+</LinearLayout>

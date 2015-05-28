@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/off_white"
+        android:clickable="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:background="@drawable/bg_titlebar_blue"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/flip_menu"
+                android:layout_width="54dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_titlebar_wrapper"
+                android:clickable="true"
+                android:contentDescription="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_titlebar_flip" />
+
+            <ImageView
+                android:layout_width="2px"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/flip_menu"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_titlebar_separator" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="@string/title_dashboard"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="220dip"
+            android:gravity="right|center_vertical"
+            android:orientation="vertical"
+            android:paddingRight="10dip"
+            android:background="@drawable/bg_main_body" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="@color/cover_time_shadow"
+                android:shadowDx="0.0"
+                android:shadowDy="2.0"
+                android:shadowRadius="0.1"
+                android:text="@string/dashboard_consume"
+                android:textColor="#ffffffff"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dashboard_consume_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip"
+                android:shadowColor="@color/cover_time_shadow"
+                android:shadowDx="0.0"
+                android:shadowDy="2.0"
+                android:shadowRadius="0.1"
+                android:textColor="#ffffffff"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip"
+                android:shadowColor="@color/cover_time_shadow"
+                android:shadowDx="0.0"
+                android:shadowDy="2.0"
+                android:shadowRadius="0.1"
+                android:text="@string/dashboard_intake"
+                android:textColor="#ffffffff"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dashboard_intake_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip"
+                android:shadowColor="@color/cover_time_shadow"
+                android:shadowDx="0.0"
+                android:shadowDy="2.0"
+                android:shadowRadius="0.1"
+                android:textColor="#ffffffff"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip"
+                android:shadowColor="@color/cover_time_shadow"
+                android:shadowDx="0.0"
+                android:shadowDy="2.0"
+                android:shadowRadius="0.1"
+                android:text="@string/dashboard_sum"
+                android:textColor="#ffffffff"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dashboard_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip"
+                android:shadowColor="@color/cover_time_shadow"
+                android:shadowDx="0.0"
+                android:shadowDy="2.0"
+                android:shadowRadius="0.1"
+                android:textColor="#ffffffff"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/dashboard_radiogroup"
+            android:layout_width="fill_parent"
+            android:layout_height="36dip"
+            android:background="@drawable/bg_group_panel"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/dashboard_movement_index_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/bg_group_panel"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/movement_index_string"
+                android:textColor="@color/selector_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/lighter_gray" />
+
+            <RadioButton
+                android:id="@+id/dashboard_achievement_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/bg_group_panel"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:text="@string/achievement_string"
+                android:textColor="@color/selector_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/lighter_gray"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/dashboard_healthy_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/bg_group_panel"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:text="@string/more_string"
+                android:textColor="@color/selector_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </RadioGroup>
+
+        <ViewFlipper
+            android:id="@+id/dashboard_content_flipper"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.0" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="WhiteDownShadow" parent="@android:style/TextAppearance">
+        <item name="android:shadowColor">@android:color/white</item>
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">2.0</item>
+    </style>
+    
+    <style name="PersonalSettingsItem">
+        <item name="android:width">120dip</item>
+        <item name="android:height">100dip</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">15dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:background">#ffB0E2FF</item>
+    </style>
+    
+    <style name="PersonalSettingsContent">
+        <item name="android:height">100dip</item>
+        <item name="android:textSize">15dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:paddingLeft">10dip</item>
+    </style>
+    
+    <!-- 时间轴上的标记点 -->
+    <style name="moment_big_dot">
+        <item name="android:paddingLeft">7.0px</item>
+        <item name="android:paddingTop">6.0px</item>
+        <item name="android:paddingRight">7.0px</item>
+        <item name="android:paddingBottom">8.0px</item>
+    </style>
+
+    <!-- 时间轴上的标记点 -->
+    <style name="moment_small_dot">
+        <item name="android:paddingLeft">6.0px</item>
+        <item name="android:paddingTop">5.0px</item>
+        <item name="android:paddingRight">6.0px</item>
+        <item name="android:paddingBottom">7.0px</item>
+    </style>
+    
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+    	<item name="android:windowIsFloating">true</item>
+    	<item name="android:windowContentOverlay">@null</item>
+    	<item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    	<item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+	</style>
+    
+    <style name="myProgressDialog" parent="@style/CustomDialog">
+		<item name="android:windowBackground">@android:color/transparent</item>
+    	<item name="android:windowNoTitle">true</item>
+	</style>
+
+</resources>

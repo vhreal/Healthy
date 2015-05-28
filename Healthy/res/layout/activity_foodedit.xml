@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/off_white">
+
+    <!-- titlebar -->
+
+    <RelativeLayout
+        android:id="@+id/foodplan_title"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/bg_titlebar_blue"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <!-- 标题 -->
+
+        <TextView
+            android:id="@+id/foodadd_title"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/title_food_plan"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- 退出按钮 -->
+
+        <ImageView
+            android:id="@+id/foodedit_back"
+            android:layout_width="54dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_titlebar_wrapper"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_titlebar_back" />
+
+        <!-- 分割线 -->
+
+        <ImageView
+            android:layout_width="2px"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:layout_toRightOf="@id/foodedit_back"
+            android:src="@drawable/bg_titlebar_separator" />
+    </RelativeLayout>
+
+    <!-- 导航栏 -->
+
+    <RadioGroup
+        android:id="@+id/food_category"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/common_food"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/bg_tabsbar"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="一般食物"
+            android:textColor="#ff333333"
+            android:textSize="18.0sp" />
+
+        <RadioButton
+            android:id="@+id/custom_food"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/bg_tabsbar"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="个人食物"
+            android:textColor="#ff333333"
+            android:textSize="18.0sp" />
+    </RadioGroup>
+
+    <ViewFlipper
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <include layout="@layout/food_addcommon" />
+
+        <include layout="@layout/food_addcustom" />
+    </ViewFlipper>
+    
+</LinearLayout>

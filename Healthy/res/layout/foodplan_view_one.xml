@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/foodplan_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:layout_weight="1.0"
+        android:scrollbars="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/food_weightedit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_foodplan"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/foodplan_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:text="现体重(kg)"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/foodplan_curweight"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/foodplan_text1"
+                android:layout_marginTop="10dp"
+                android:hint="0.0"
+                android:maxLength="5"
+                android:numeric="decimal"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/foodplan_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/foodplan_curweight"
+                android:layout_marginTop="15dp"
+                android:text="目标体重(kg)"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/foodplan_aimweight"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/foodplan_text2"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="0.0"
+                android:maxLength="5"
+                android:numeric="decimal"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/foodplan_heighttext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/foodplan_aimweight"
+                android:layout_marginTop="15dp"
+                android:text="身高(cm)"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/foodplan_height"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/foodplan_heighttext"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="0.0"
+                android:maxLength="5"
+                android:numeric="decimal"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/foodplan_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/foodplan_height"
+                android:layout_marginLeft="8.0dip"
+                android:layout_marginTop="15dp"
+                android:text="请选择性别"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <RadioGroup
+                android:id="@+id/sexual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/foodplan_text3"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="性别" >
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="男"
+                    android:textColor="@color/black" >
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="女"
+                    android:textColor="@color/black" >
+                </RadioButton>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/foodplan_text4"
+                android:layout_width="80.0dip"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/foodplan_text3"
+                android:layout_below="@id/foodplan_aimweight"
+                android:layout_marginLeft="70dp"
+                android:layout_toRightOf="@id/foodplan_text3"
+                android:text="请输入年龄"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/foodplan_age"
+                android:layout_width="90.0dip"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/foodplan_text4"
+                android:layout_below="@id/foodplan_text4"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:hint="0"
+                android:maxLength="3"
+                android:numeric="integer"
+                android:text="" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/foodplan_nextBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dip"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dip"
+        android:background="@drawable/selector_login_btn"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:text="下一步"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>
